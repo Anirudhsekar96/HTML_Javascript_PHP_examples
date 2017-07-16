@@ -1,0 +1,89 @@
+<!Doctype html>
+	<head>
+		<script>
+			var cu=[];
+			var i=0;
+			function Cust(a1,b1,c1)
+			{
+				this.nam=a1;
+				this.ano=parseInt(b1);
+				this.bal=parseInt(c1);
+			}
+			function Addcust()
+			{
+				a=document.getElementById("nam1").value;
+				b=document.getElementById("ano1").value;
+				c=document.getElementById("bal1").value;
+				cu[i]=new Cust(a,b,c);
+				i++;							
+			}
+			function Inbal()
+			{
+				for(var j=0;j<cu.length;j++)
+				{
+					if(cu[j].bal<50000)
+					{
+						alert("Balance Insufficient for "+cu[j].nam);
+					}
+				}
+			}
+			function Wit()
+			{
+				var ano5=parseInt(document.getElementById("ano2").value);
+				var amt1=parseInt(document.getElementById("amt").value);
+				for(var g=0;g<cu.length;g++)
+				{
+					if(cu[g].ano===ano5)
+					{
+						if(cu[g].bal>=amt1)
+						{
+							cu[g].bal=cu[g].bal-amt1;
+							alert("Transaction Complete!!");
+						}
+						else
+						{
+							alert("Insufficient Balance!!");
+						}
+					}
+				}
+			}
+			function Dep()
+			{
+				var ano5=parseInt(document.getElementById("ano2").value);
+				var amt1=parseInt(document.getElementById("amt").value);
+				for(var g=0;g<cu.length;cu++)
+				{
+					if(cu[g].ano===ano5)
+					{
+						if(cu[g].bal>=amt1)
+						{
+							cu[g].bal=cu[g].bal+amt1;
+							alert("Transaction Complete!!");
+						}
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>	
+		<br><h3>Name</h3>
+		<input type="text" id="nam1">
+		<br><h3>Account No.</h3>
+		<input type="text" id="ano1">
+		<br><h3>Balance</h3>
+		<input type="text" id="bal1">
+		<br>
+		<input type="button" Onclick="Addcust()" value="Submit">
+		<br>
+		<input type="button" Onclick="Inbal()" value="Find insufficient balance customers">
+		<br><h3>Account No.</h3>
+		<input type="text" id="ano2">
+		<br><h3>Amount</h3>
+		<input type="text" id="amt">
+		<br>
+		<input type="button" Onclick="Wit()" value="Withdraw">
+		<br>
+		<input type="button" Onclick="Dep()" value="Deposit">
+	</body>
+</html>
+

@@ -1,0 +1,49 @@
+<!Doctype html>
+	<script>
+		x="";
+		function ele()
+		{
+			x="Element";
+		}
+		function eve()
+		{
+			x="Event";
+		}
+	</script>
+	<body>
+		<textarea id="t1"></textarea>
+		<br>
+		<input type="radio" name="select" value="element" onchange="ele()"> Element<br>
+		<input type="radio" name="select" value="event" onchange="eve()"> Event<br>
+		<input type="button" onclick="abc()" value="Add">
+		<input type="button" onclick="cba()" value="Remove">
+	</body>
+	<script>
+		function axs(){alert("Hello");}
+		function abc()
+		{
+			if(x==="Element")
+			{
+				x1=document.createTextNode("x1=document.createTextNode('');document.getElementById('t1').appendChild(x1);");
+				document.getElementById("t1").appendChild(x1);
+			}
+			if(x==="Event")
+			{
+				document.getElementById("t1").addEventListener("mouseover",axs);
+				x2=document.createTextNode("document.getElementById('t1').addEventListener('mouseover',function(){alert('Hello');});x2=document.createTextNode('x1=document.createTextNode('');document.getElementById('t1').appendChild(x1);');document.getElementById('t1').appendChild(x2);");
+				document.getElementById("t1").appendChild(x2);
+			}
+		}
+		function cba()
+		{
+			if(x==="Element")
+			{
+				document.getElementById("t1").removeChild(x1);
+			}
+			if(x==="Event")
+			{
+				document.getElementById("t1").removeEventListener("mouseover",axs);
+			}
+		}
+	</script>
+</html>

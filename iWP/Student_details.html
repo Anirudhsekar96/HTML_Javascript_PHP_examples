@@ -1,0 +1,62 @@
+<!Doctype html>
+	<head>
+		<script>
+			var st=[];
+			var i=0;
+			function Student(a1,b1,c1,d1,e1,f1)
+			{
+				this.nam=a1;
+				this.reg=b1;
+				this.ca1=parseInt(c1);
+				this.ca2=parseInt(d1);
+				this.pb=parseInt(e1);
+				this.te=parseInt(f1);
+				this.total=this.ca1+this.ca2+this.pb+this.te;
+				this.disp=function(){alert("Name:-"+this.nam+" Total:- "+this.total);}
+			}
+			function stu()
+			{
+				a=document.getElementById("nam").value;
+				b=document.getElementById("regno").value;
+				c=document.getElementById("cat1").value;
+				d=document.getElementById("cat2").value;
+				e=document.getElementById("pbl").value;
+				f=document.getElementById("tee").value;
+				st[i]=new Student(a,b,c,d,e,f);
+				st[i].disp();
+				i++;							
+			}
+			function Topper()
+			{	
+				var max=0;
+				var pos=0;
+				for(var j=0;j<st.length;j++)
+				{
+					if(st[j].total>max)
+					{
+						max=st[j].total;
+						pos=j;
+					}
+				}
+				alert("Topper is "+st[pos].nam);
+			}
+		</script>
+	</head>
+	<body>	
+		<br><h3>Name</h3>
+		<input type="text" id="nam">
+		<br><h3>Reg No.</h3>
+		<input type="text" id="regno">
+		<br><h3>Cat1 Marks</h3>
+		<input type="text" id="cat1">
+		<br><h3>Cat2 Marks</h3>
+		<input type="text" id="cat2">
+		<br><h3>PBL marks</h3>
+		<input type="text" id="pbl">
+		<br><h3>Tee Marks</h3>
+		<input type="text" id="tee">
+		<br>
+		<input type="button" Onclick="stu()" value="Submit">
+		<input type="button" Onclick="Topper()" value="Find Topper">
+	</body>
+</html>

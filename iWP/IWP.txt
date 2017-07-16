@@ -1,0 +1,11 @@
+Dynamic Object Creation
+Event Listener
+Event Capturing and Bubbling
+Php Files
+Fread
+Fwrite
+Fscanf/fprintf
+Binary Safe Operator
+File Upload
+Cookies
+Ajax Basics

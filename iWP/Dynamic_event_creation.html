@@ -1,0 +1,19 @@
+<!Doctype html>
+	<head>
+		<script>
+			function abc()
+			{	
+				document.getElementById("btn").disabled=true;
+				bt=document.createElement("Button");
+				t1=document.createTextNode("click here");
+				bt.appendChild(t1);
+				document.body.appendChild(bt);
+				bt.addEventListener("click",function(){alert("Hello");})
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="Add button" onclick="abc()" id="btn">
+	</body>
+</html>
+

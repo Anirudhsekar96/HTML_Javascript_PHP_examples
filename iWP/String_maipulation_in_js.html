@@ -1,0 +1,100 @@
+<!doctype HTML>
+<html>
+<script>
+
+	function first()
+	{
+		a=document.getElementById("n").value;
+		d=a.length;
+		b=a.charCodeAt(0); 
+		if(b>=97)
+		{	b=b-32;	
+			c=String.fromCharCode(b);
+			str=c;
+			for(i=1;i<d;i++)
+			 str=str+a[i];
+			alert(str);}
+		else
+		alert(a);
+		
+	}
+
+		function second()
+	{
+		a=document.getElementById("n").value;
+		d=a.length; var str1=" ";
+		for(i=0;i<d;i++)
+		{
+		if(i%2==0)
+			{b=a.charCodeAt(i); 
+			b=b-32;	
+			c=String.fromCharCode(b);
+			str1=str1+c;
+		}
+		else
+			str1=str1+a[i];
+		}
+
+		alert(str1);
+		
+		
+	}	
+		
+		function third()
+			{
+				a=document.getElementById("n").value;
+				q=a.split(" ");
+				var max=0;
+				var pos=0;
+				var i;
+				for(i=0;i<q.length;i++)
+				{
+					if(max<q[i].length)
+					{
+						max=q[i].length;
+						pos=i;
+					}
+					b=q[pos];
+				}
+				alert(b + " is the word of longest lendth in the sentence");
+			}
+
+			function fourth()
+			{
+				a=document.getElementById("n").value;
+				d=a.split(" ");
+				var str;
+				var max=0;
+				for(var i=0;i<d.length;i++)
+				{
+					d[i]=d[i].toLowerCase();
+				}
+				for(var j=0;j<d.length;j++)
+				{
+					var c = 0;
+					for(var k=0;k<d.length;k++)
+					{
+						if(d[j]===d[k])
+						{
+							c++;
+						}
+						if(c>max)
+						{
+							max = c;
+							str = d[j];
+						}
+					}
+				}
+				alert(str);
+			}
+
+</script>
+<body>
+Enter Name:	<input type="text"  id="n">
+		<input type="button"  Onclick="first()" value="nametouppercase">
+		<input type="button"  Onclick="second()" value="Alternatelettercapital">
+		<input type="button"  Onclick="third()" value="Longest Wordlength">
+		<input type="button" Onclick="fourth()" value="wordofmaxfrequency">
+
+</body>
+</html>

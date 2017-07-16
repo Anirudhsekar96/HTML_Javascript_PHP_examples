@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+
+	<body>
+		<form id="n">
+			Name: <input type="text" name="n1" id="n1">
+			Work: <input type="text" name="w1" id="w1">
+			<input type="button" value="submit" name="submit" id="submit" onclick="func()">
+	</body>
+</html>
+
+<script>
+	a = document.getElementById("n1").value;
+	b = document.getElementById("w1").value;
+	function func(){
+		submit.disabled=true;
+		//console.log("got it")
+		e1 = document.createElement("button");
+		b1 = document.createTextNode("Fun");
+		e1.appendChild(b1);
+		e1.addEventListener("mouseover",function(){alert("piggy!");});
+		n.appendChild(e1);
+	}
+</script>

@@ -1,0 +1,32 @@
+<!Doctype html>
+	<head>
+	</head>
+	<body>
+		<table style="border: 1px solid black;">
+			<tr>
+				<th style="border: 1px solid black;">
+					Branch and Year
+				</th>
+				<th style="border: 1px solid black;">
+					Subjects
+				</th>
+			</tr>
+			<tr>
+				<td id="t1" style="border: 1px solid black;">
+					Btech 3rd Year
+				</td>
+				<td id="tx1" style="border: 1px solid black;"></td>
+			</tr>
+			<tr>
+				<td style="border: 1px solid black;" id="t2">
+					Btech 2nd Year
+				</td>
+				<td id="tx2" style="border: 1px solid black;"></td>
+			</tr>
+		</table>
+	</body>
+		<script>
+				document.getElementById("t1").addEventListener("mouseover",function(){document.getElementById("tx1").innerHTML="Graphics And Multimedia";});
+				document.getElementById("t2").addEventListener("mouseover",function(){document.getElementById("tx2").innerHTML="Pattern Classification";});
+		</script>
+</html>

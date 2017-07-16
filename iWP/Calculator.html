@@ -1,0 +1,98 @@
+<!Doctype html>
+	<head>
+		<script>
+			//Calculator
+			function Addfunc()
+			{
+				a=parseInt(document.getElementById("n1").value);
+				b=parseInt(document.getElementById("n2").value);
+				c=a+b;
+				alert(c);
+			}
+			function Subfunc()
+			{
+				a=parseInt(document.getElementById("n1").value);
+				b=parseInt(document.getElementById("n2").value);
+				c=a-b;
+				alert(c);
+			}
+			function Mulfunc()
+			{
+				a=parseInt(document.getElementById("n1").value);
+				b=parseInt(document.getElementById("n2").value);
+				c=a*b;
+				alert(c);
+			}
+			function Divfunc()
+			{
+				a=parseInt(document.getElementById("n1").value);
+				b=parseInt(document.getElementById("n2").value);
+				c=a/b;
+				alert(c);
+			}
+			function Primefunc()
+			{
+				d=parseInt(document.getElementById("n3").value);
+				var flag=0;
+				var i;				
+				for(i=2;i<d;i++)
+				{
+					if((d%i)==0)
+					{flag=1;break;}
+				}
+				if(flag==0)
+				{
+					alert("Prime");
+				}
+				else
+				{alert("Not Prime");}
+			} 
+			function Armfunc()
+			{
+				a=prompt("Enter a number");
+				f=a.split("");
+				a=parseInt(a);
+				var sum=0;
+				for(var i=0;i<f.length;i++)
+				{
+					x=parseInt(f[i]);
+					sum=sum+(x*x*x);
+				}
+				if(sum===a)
+				{alert("Armstrong Number");}
+				else
+				{alert("Not Armstrong number");}
+			}
+			function Arfunc()
+			{
+				Armfunc();
+			}
+		</script>
+	</head>
+	<body>
+		<h2>Audio</h2>
+		<audio controls>	
+			<source src="C:\Users\megha\Desktop\jb.mp3" type="audio/mp3">
+		</audio><br>
+		<h2>Video</h2>
+		<video width="400" controls>
+			<source src="C:\Users\megha\Desktop\maroon5.mp4" type="video/mp4">
+		</video><br>
+		<!--For Calculator-->
+		<h2>Calculator</h2>
+		<input type="text" id="n1">
+		<input type="text" id="n2">
+		<input type="button" Onclick="Addfunc()" value="Add">
+		<input type="button" Onclick="Subfunc()" value="Subtract">
+		<input type="button" Onclick="Mulfunc()" value="Multiply">
+		<input type="button" Onclick="Divfunc()" value="Divide">
+		<br>
+		<!--For Prime Check-->
+		<h2>Prime</h2>
+		<input type="text" id="n3">
+		<input type="button" Onclick="Primefunc()" value="Check Prime">
+		<br><h2>Armstrong number</h2>
+		<input type="button" Onclick="Arfunc()" value="Check Armstrong">
+	</body>
+</html>
+
